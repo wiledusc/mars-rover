@@ -1,29 +1,32 @@
-<h1 align="center">Welcome to mars-rover 👋</h1>
+<h1 align="center">Mars Rover - Voyager Code Challenge </h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> Mars Rover - Voyager Code Challenge
-
 ## Live Demo:
 [Click here to see the Live Demo!](https://wiledusc.github.io/mars-rover/) 
 
-## Install
+## Install the project dependencies:
 
 ```sh
 yarn install
 ```
 
-## Usage
+## Start the application:
 
 ```sh
 yarn start
 ```
 
-## Run tests
+## Run tests:
 
 ```sh
 yarn test
+```
+
+## See the tests coverage:
+```sh
+coverage/lcov-report/index.html
 ```
 
 ## Author
