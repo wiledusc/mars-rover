@@ -21,7 +21,7 @@ export default class Rover {
 
     startRover(position) {
         const initialPosition = position.trim().split(' ');
-        if(this.validateInitialPosition(initialPosition)) {
+        if (this.validateInitialPosition(initialPosition)) {
             this.positionX = parseInt(initialPosition[0].trim());
             this.positionY = parseInt(initialPosition[1].trim());
             this.direction = initialPosition[2].trim();
@@ -32,12 +32,12 @@ export default class Rover {
 
     validateInitialPosition(initialParams) {
 
-        const validOrientation = ['N','S','E','W'];
+        const validOrientation = ['N', 'S', 'E', 'W'];
 
         if (initialParams.length !== 3) return false;
-        if(isNaN(parseInt(initialParams[0])) || parseInt(initialParams[0]) < 0) return false;
-        if(isNaN(parseInt(initialParams[1])) || parseInt(initialParams[1]) < 0) return false;
-        if(validOrientation.indexOf(initialParams[2]) === -1) return false;
+        if (isNaN(parseInt(initialParams[0])) || parseInt(initialParams[0]) < 0) return false;
+        if (isNaN(parseInt(initialParams[1])) || parseInt(initialParams[1]) < 0) return false;
+        if (validOrientation.indexOf(initialParams[2]) === -1) return false;
 
         return true;
     }
@@ -61,7 +61,7 @@ export default class Rover {
     }
 
     getCurrentPosition() {
-        return `${this.positionX},${this.positionY},${this.direction}`;
+        return `${this.positionX} ${this.positionY} ${this.direction}`;
     }
 
     showErrorMessage() {
