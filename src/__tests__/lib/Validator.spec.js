@@ -32,10 +32,10 @@ describe("Validator Class Test", () => {
         expect(validator.validateForm()).toStrictEqual(false);
     });
 
-    it('Should return all error messages if all fields are blank', () => {
+    it('Should return all error messages if all fields are blanks', () => {
 
         const allErrorMessagesArray = ["Plateau Max X is mandatory", "Plateau Max Y is mandatory", "Rover 1 initial position is mandatory", "Rover 2 initial position is mandatory", "Commands Rover 1 is mandatory", "Commands Rover 2 is mandatory"];
-        
+
         const fields = {
             plateauMaxX: '',
             plateauMaxY: '',
