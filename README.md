@@ -5,6 +5,9 @@
 
 > Mars Rover - Voyager Code Challenge
 
+## Live Demo:
+[Click here to see the Live Demo!](https://wiledusc.github.io/mars-rover/) 
+
 ## Install
 
 ```sh
