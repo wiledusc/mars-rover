@@ -29,10 +29,3 @@ yarn test
 
 * Website: https://www.linkedin.com/in/williamedu/
 * Github: [@wiledusc](https://github.com/wiledusc)
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
