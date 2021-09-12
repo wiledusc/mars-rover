@@ -15,6 +15,11 @@ function App() {
   const [outputRover1, setOutputRover1] = useState('');
   const [outputRover2, setOutputRover2] = useState('');
 
+  function clearOuputs() {
+    setOutputRover1('');
+    setOutputRover2('');
+  }
+
   function fillDemoValues() {
     setPlateauMaxX('10');
     setPlateauMaxY('10');
@@ -118,7 +123,7 @@ function App() {
                 }
               }}
               value={plateauMaxX}
-              onChange={event => setPlateauMaxX(event.target.value)}
+              onChange={event => {clearOuputs(); setPlateauMaxX(event.target.value)}}
             />
             <input
               type="text"
@@ -130,7 +135,7 @@ function App() {
                 }
               }}
               value={plateauMaxY}
-              onChange={event => setPlateauMaxY(event.target.value)}
+              onChange={event => {clearOuputs(); setPlateauMaxY(event.target.value)}}
             />
           </div>
 
@@ -148,7 +153,7 @@ function App() {
                 }
               }}
               value={initialPositionRover1}
-              onChange={event => setInitialPositionRover1(event.target.value)}
+              onChange={event => {clearOuputs(); setInitialPositionRover1(event.target.value)}}
             />
             <input
               type="text"
@@ -160,7 +165,7 @@ function App() {
                   event.preventDefault();
                 }
               }}
-              onChange={event => setCommandsRover1(event.target.value)}
+              onChange={event => {clearOuputs(); setCommandsRover1(event.target.value)}}
             />
           </div>
 
@@ -178,7 +183,7 @@ function App() {
                 }
               }}
               value={initialPositionRover2}
-              onChange={event => setInitialPositionRover2(event.target.value)}
+              onChange={event => {clearOuputs(); setInitialPositionRover2(event.target.value)}}
             />
             <input
               type="text"
@@ -190,7 +195,7 @@ function App() {
                 }
               }}
               value={commandsRover2}
-              onChange={event => setCommandsRover2(event.target.value)}
+              onChange={event => {clearOuputs(); setCommandsRover2(event.target.value)}}
             />
           </div>
 
