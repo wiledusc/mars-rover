@@ -2,39 +2,55 @@ import Validator from '../../lib/Validator';
 
 describe("Validator Class Test", () => {
 
-    it('Should return true if the fields are correct', () => {
+    it('Should return true if the plateau fields are correct', () => {
         const fields = {
             plateauMaxX: '10',
             plateauMaxY: '10',
-            initialPositionRover1: '0,0,N',
-            initialPositionRover2: '0,0,N',
-            commandsRover1: 'M',
-            commandsRover2: 'M'
         };
 
         const validator = new Validator(fields);
 
-        expect(validator.validateForm()).toStrictEqual(true);
+        expect(validator.validatePlateau()).toStrictEqual(true);
     });
 
-    it('Should return false if the fields are blank', () => {
+    it('Should return true if the plateau fields are correct', () => {
         const fields = {
-            plateauMaxX: '',
-            plateauMaxY: '',
-            initialPositionRover1: '',
-            initialPositionRover2: '',
-            commandsRover1: '',
-            commandsRover2: ''
+            plateauMaxX: '10',
+            plateauMaxY: '10',
         };
 
         const validator = new Validator(fields);
 
-        expect(validator.validateForm()).toStrictEqual(false);
+        expect(validator.validatePlateau()).toStrictEqual(true);
     });
+
+    it('Should return true if the Rover 1 fields are correct', () => {
+        const fields = {
+            initialPositionRover1: '0 0 N',
+            commandsRover1: 'MRL',
+        };
+
+        const validator = new Validator(fields);
+
+        expect(validator.validateRover1()).toStrictEqual(true);
+    });
+
+    it('Should return true if the Rover 1 fields are correct', () => {
+        const fields = {
+            initialPositionRover2: '0 0 N',
+            commandsRover2: 'MRL',
+        };
+
+        const validator = new Validator(fields);
+
+        expect(validator.validateRover2()).toStrictEqual(true);
+    });
+
+
 
     it('Should return all error messages if all fields are blanks', () => {
 
-        const allErrorMessagesArray = ["Plateau Max X is mandatory", "Plateau Max Y is mandatory", "Rover 1 initial position is mandatory", "Rover 2 initial position is mandatory", "Commands Rover 1 is mandatory", "Commands Rover 2 is mandatory"];
+        const allErrorMessagesArray = ["Plateau Max X is mandatory", "Plateau Max Y is mandatory", "Rover 1 initial position is mandatory", "Commands Rover 1 is mandatory", "Rover 2 initial position is mandatory", "Commands Rover 2 is mandatory"];
 
         const fields = {
             plateauMaxX: '',
@@ -46,7 +62,9 @@ describe("Validator Class Test", () => {
         };
 
         const validator = new Validator(fields);
-        validator.validateForm();
+        validator.validatePlateau();
+        validator.validateRover1()
+        validator.validateRover2()
 
         expect(validator.getErrorMessage()).toStrictEqual(allErrorMessagesArray);
     });
