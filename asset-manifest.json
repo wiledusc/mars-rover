@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mars-rover/static/css/main.2aa60db2.chunk.css",
-    "main.js": "/mars-rover/static/js/main.6270f7a1.chunk.js",
-    "main.js.map": "/mars-rover/static/js/main.6270f7a1.chunk.js.map",
+    "main.js": "/mars-rover/static/js/main.01a8a63e.chunk.js",
+    "main.js.map": "/mars-rover/static/js/main.01a8a63e.chunk.js.map",
     "runtime-main.js": "/mars-rover/static/js/runtime-main.750a829e.js",
     "runtime-main.js.map": "/mars-rover/static/js/runtime-main.750a829e.js.map",
     "static/css/2.8caad30d.chunk.css": "/mars-rover/static/css/2.8caad30d.chunk.css",
     "static/js/2.86a85228.chunk.js": "/mars-rover/static/js/2.86a85228.chunk.js",
     "static/js/2.86a85228.chunk.js.map": "/mars-rover/static/js/2.86a85228.chunk.js.map",
     "index.html": "/mars-rover/index.html",
-    "precache-manifest.18516d627ecdaf84173028c1e60f1263.js": "/mars-rover/precache-manifest.18516d627ecdaf84173028c1e60f1263.js",
+    "precache-manifest.86ef6befd46d2485d29349a2afb396a7.js": "/mars-rover/precache-manifest.86ef6befd46d2485d29349a2afb396a7.js",
     "service-worker.js": "/mars-rover/service-worker.js",
     "static/css/2.8caad30d.chunk.css.map": "/mars-rover/static/css/2.8caad30d.chunk.css.map",
     "static/css/main.2aa60db2.chunk.css.map": "/mars-rover/static/css/main.2aa60db2.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.8caad30d.chunk.css",
     "static/js/2.86a85228.chunk.js",
     "static/css/main.2aa60db2.chunk.css",
-    "static/js/main.6270f7a1.chunk.js"
+    "static/js/main.01a8a63e.chunk.js"
   ]
 }
