@@ -3,7 +3,6 @@ import Plateau from './model/Plateau';
 import Rover from './model/Rover';
 import Validator from './lib/Validator';
 import { ToastContainer, toast } from 'react-toastify';
-
 import './App.css';
 
 function App() {
@@ -57,29 +56,27 @@ function App() {
 
     if (validator.validateForm()) {
       try {
-        //Create the Plateau rectangle (10 x 10)
+
         const plateau = new Plateau(plateauMaxX, plateauMaxY);
         const rover1 = new Rover(plateau);
 
-        //Set initial position for the Rover 1
         rover1.startRover(initialPositionRover1);
-
-        //Send the commands to the Rover 1
         rover1.sendCommands(commandsRover1);
+
         const currentPositionRover1 = rover1.getCurrentPosition(commandsRover1);
+
         setOutputRover1(currentPositionRover1);
 
         const rover2 = new Rover(plateau);
 
-        //Set initial position for the Rover 2
         rover2.startRover(initialPositionRover2);
-
-        //Send the commands to the Rover 2
         rover2.sendCommands(commandsRover2);
+
         const currentPositionRover2 = rover2.getCurrentPosition(commandsRover2);
+
         setOutputRover2(currentPositionRover2);
+
       } catch (e) {
-        console.error(e);
         showErrorMessage(e);
       }
     } else {
