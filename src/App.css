@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body, #root{
+  min-height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background: #000 url('./assets/mars-rover-3.jpg') no-repeat;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body, input, button{
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.container{
+  margin: 15vh 20px 20px 350px;
+  max-width: 600px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.content{
+  width: 100%;
+  background: #fff;
+  margin-top: 30px;
+  border-radius: 4px;
+  padding: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.content > p{
+  font-size:22px;
+  line-height: 30px;
+  margin-bottom: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content form{
+  display: flex;
+  flex-direction: column;
+}
+.content form label{
+  font-size: 14px;
+  color: #444;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.content form input{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  height: 35px;
+  padding: 0 15px;
+  font-size: 16px;
+  
+}
+.content form input.valid {
+  background: url(assets/check.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 98% 7px;
+}
+.content form input.invalid {
+  background: url(assets/check.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 98% 7px;
+}
+.content button{
+  border: 0px;
+  border-radius: 2px;
+  width: 31%;
+  height: 30px;
+  padding: 0 20px;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+.content button.btn-start{
+  background: #f05a5b;
+}
+.content button.btn-demo{
+  background: rgb(67, 161, 87);
+}
+.content button.btn-clear{
+  background: rgb(155, 152, 152);
 }
