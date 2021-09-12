@@ -24,7 +24,8 @@ yarn start
 yarn test
 ```
 
-## See the tests coverage:
+## See the tests coverage 
+(Dynamically generated after run yarn test):
 ```sh
 coverage/lcov-report/index.html
 ```
