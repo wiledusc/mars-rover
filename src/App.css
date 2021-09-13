@@ -21,7 +21,7 @@ body, input, button{
   font-size: 14px;
 }
 
-#commandsRover1, #commandsRover2 {
+#initialPositionRover1, #initialPositionRover2, #commandsRover1, #commandsRover2 {
   text-transform: uppercase;
 }
 

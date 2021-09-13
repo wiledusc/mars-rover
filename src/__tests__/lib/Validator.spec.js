@@ -1,6 +1,6 @@
 import Validator from '../../lib/Validator';
 
-describe("Validator Class Test", () => {
+describe("Validator Class Tests", () => {
 
     it('Should return true if the plateau fields are correct', () => {
         const fields = {

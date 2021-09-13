@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Plateau from './model/Plateau';
 import Rover from './model/Rover';
 import Validator from './lib/Validator';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+import { checkPlateauInputs, checkInitialPositionInputs, checkCommandsInputs, showErrorMessage } from './helpers/form-helpers'
 import './App.css';
 
 function App() {
@@ -38,19 +39,6 @@ function App() {
     setCommandsRover2('');
     setOutputRover1('');
     setOutputRover2('');
-  }
-
-  function showErrorMessage(message) {
-    toast.error(`${message}`, {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored"
-    });
   }
 
   function executeRover1(plateau) {
@@ -117,25 +105,17 @@ function App() {
               type="text"
               id="plateauMaxX"
               placeholder="Max X"
-              onKeyPress={(event) => {
-                if (!/[0-9]/.test(event.key)) {
-                  event.preventDefault();
-                }
-              }}
+              onKeyPress={checkPlateauInputs}
               value={plateauMaxX}
-              onChange={event => {clearOuputs(); setPlateauMaxX(event.target.value)}}
+              onChange={event => { clearOuputs(); setPlateauMaxX(event.target.value) }}
             />
             <input
               type="text"
               id="plateauMaxY"
               placeholder="Max Y"
-              onKeyPress={(event) => {
-                if (!/[0-9]/.test(event.key)) {
-                  event.preventDefault();
-                }
-              }}
+              onKeyPress={checkPlateauInputs}
               value={plateauMaxY}
-              onChange={event => {clearOuputs(); setPlateauMaxY(event.target.value)}}
+              onChange={event => { clearOuputs(); setPlateauMaxY(event.target.value) }}
             />
           </div>
 
@@ -147,25 +127,17 @@ function App() {
               type="text"
               id="initialPositionRover1"
               placeholder="0 0 N - Initial Position"
-              onKeyPress={(event) => {
-                if (!/[0-9 0-9 NSEW]/.test(event.key)) {
-                  event.preventDefault();
-                }
-              }}
+              onKeyPress={checkInitialPositionInputs}
               value={initialPositionRover1}
-              onChange={event => {clearOuputs(); setInitialPositionRover1(event.target.value)}}
+              onChange={event => { clearOuputs(); setInitialPositionRover1(event.target.value) }}
             />
             <input
               type="text"
               id="commandsRover1"
               placeholder="LRM - Rover Commands"
               value={commandsRover1}
-              onKeyPress={(event) => {
-                if (!/[LRMlrm]/.test(event.key)) {
-                  event.preventDefault();
-                }
-              }}
-              onChange={event => {clearOuputs(); setCommandsRover1(event.target.value)}}
+              onKeyPress={checkCommandsInputs}
+              onChange={event => { clearOuputs(); setCommandsRover1(event.target.value) }}
             />
           </div>
 
@@ -177,25 +149,17 @@ function App() {
               type="text"
               id="initialPositionRover2"
               placeholder="0 0 N - Initial Position"
-              onKeyPress={(event) => {
-                if (!/[0-9 0-9 NSEW]/.test(event.key)) {
-                  event.preventDefault();
-                }
-              }}
+              onKeyPress={checkInitialPositionInputs}
               value={initialPositionRover2}
-              onChange={event => {clearOuputs(); setInitialPositionRover2(event.target.value)}}
+              onChange={event => { clearOuputs(); setInitialPositionRover2(event.target.value) }}
             />
             <input
               type="text"
               id="commandsRover2"
               placeholder="LRM - Rover Commands"
-              onKeyPress={(event) => {
-                if (!/[LRMlrm]/.test(event.key)) {
-                  event.preventDefault();
-                }
-              }}
+              onKeyPress={checkCommandsInputs}
               value={commandsRover2}
-              onChange={event => {clearOuputs(); setCommandsRover2(event.target.value)}}
+              onChange={event => { clearOuputs(); setCommandsRover2(event.target.value) }}
             />
           </div>
 
