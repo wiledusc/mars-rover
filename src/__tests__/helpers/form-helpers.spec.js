@@ -7,14 +7,12 @@ describe("Form Helper Tests", () => {
         const event = { key: '10 10 E', preventDefault: () => { return true }};
 
         expect(formHelper.checkInitialPositionInputs(event)).toBe(undefined);
-
     });
 
     it('Should execute preventDefault when the wrong input parameters are informed ', () => {
         const event = { key: 'A', preventDefault: () => { return true }};
 
         expect(formHelper.checkInitialPositionInputs(event)).toBe(true);
-
     });
 
     it('Should not execute preventDefault when the correct input parameters are informed', () => {
